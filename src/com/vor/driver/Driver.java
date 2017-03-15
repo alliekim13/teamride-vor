@@ -5,7 +5,7 @@ import com.vor.vorcalculator.VORCalculator;
 public class Driver {
 	public static void main(String[] args) {
 		testRadio();
-    testVORCalulator();
+    testVORCalculator();
 	}
 	
 	public static void testRadio() {
@@ -13,10 +13,8 @@ public class Driver {
 		System.out.println(rs);
 	}
 
-	public static void testVORCalulator() {
-    VORCalculator calc = new VORCalculator(new RadioSignal());
-    System.out.println(calc.getSignal());
-    System.out.println(calc.calculate());
+	public static void testVORCalculator() {
+    VORCalculator calc = new VORCalculator();
   }
 
 }

@@ -3,14 +3,21 @@ import com.vor.radio.RadioSignal;
 
 public class VORCalculator {
   private VORResult result;
-  private RadioSignal signal;
   private int heading;
 
   public VORCalculator() {
   }
 
-  public VORCalculator(RadioSignal signal) {
-    this.signal = signal;
+  public VORCalculator(int heading) {
+    this.heading = heading;
+  }
+
+  public int getHeading() {
+    return heading;
+  }
+
+  public void setHeading(int heading) {
+    this.heading = heading;
   }
 
   public VORResult getResult() {
@@ -21,18 +28,11 @@ public class VORCalculator {
     this.result = result;
   }
 
-  public RadioSignal getSignal() {
-    return signal;
-  }
-
-  public void setSignal(RadioSignal signal) {
-    this.signal = signal;
-  }
   /*
   * Calculation functions
   */
 
-  public VORResult calculate () {
+  public VORResult calculate (RadioSignal signal) {
     return null;
   }
 

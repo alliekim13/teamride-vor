@@ -17,7 +17,7 @@ public class RadioSignal {
 	
 	private void generateRadial() {
 		Random rand = new Random();
-		radial = rand.nextInt(359);
+		this.radial = rand.nextInt(359);
 	}
 
 	private void generateSignal() {

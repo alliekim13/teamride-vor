@@ -15,6 +15,7 @@ hs_err_pid*
 *.iml
 *.idea
 /out/
+/meta-inf/
 
 #Eclipse
 *.classpath

@@ -40,15 +40,23 @@ public class VORCalculator {
 		else return radial;
 	}
 
-	public int calculateDeflection(int radial, int obs_heading) {
-    int o = (obs_heading % 180);
-    int r = (Math.abs(radial-o) % 180);
-    int deflection = Math.min(180- r, r);
+	public int calculateDeflection(int radial, int obs, boolean isTo) {
+    int r = radial;
+    if(isTo) {
+      r = normalizeRadial(radial+180);
+    }
+    int angle = Math.abs(obs-r) % 360;
+    angle = Math.min(angle,10);
+    int deflection = angle * ((obs-r<0)? -1 : 1);
     return deflection;
   }
 
   public VORResult calculate(){
     return null;
+  }
+
+  public boolean isTo(int radial, int obs) {
+    return true;
   }
 
 }

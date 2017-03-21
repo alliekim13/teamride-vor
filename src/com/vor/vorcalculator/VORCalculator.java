@@ -1,5 +1,5 @@
 package com.vor.vorcalculator;
-
+import java.math.*;
 public class VORCalculator {
 	
 	private VOR vor;
@@ -39,4 +39,16 @@ public class VORCalculator {
 		}
 		else return radial;
 	}
+
+	public int calculateDeflection(int radial, int obs_heading) {
+    int o = (obs_heading % 180);
+    int r = (Math.abs(radial-o) % 180);
+    int deflection = Math.min(180- r, r);
+    return deflection;
+  }
+
+  public VORResult calculate(){
+    return null;
+  }
+
 }

@@ -7,6 +7,8 @@ public class Driver {
 		testRadio();
     testVORCalculator();
 		testIsAbeam(0, 270);
+		testCalculateDeflection(180, 178);
+		testCalculateDeflection(7, 178);
 	}
 	
 	public static void testRadio() {
@@ -25,4 +27,9 @@ public class Driver {
 		boolean abeam = vc.isAbeam();
 		System.out.println(abeam);
 	}
+	public static void testCalculateDeflection(int radial, int obs) {
+    VORCalculator vc = new VORCalculator(new VOR());
+      double result = vc.calculateDeflection(radial, obs);
+    System.out.println(result);
+  }
 }

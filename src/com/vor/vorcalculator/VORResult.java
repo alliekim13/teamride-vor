@@ -33,4 +33,13 @@ public class VORResult {
   public void setDirection(Direction dir) {
     direction = dir;
   }
+
+  @Override
+  public String toString() {
+    return "VORResult{" +
+        "deflection=" + deflection +
+        ", direction=" + direction +
+        ", signal=" + signal +
+        '}';
+  }
 }

@@ -18,7 +18,10 @@ public class Driver {
 	}
 
 	public static void testVORCalculator() {
-    VOR calc = new VOR();
+    RadioSignal rs = new RadioSignal(178, Signal.GOOD);
+    VORCalculator calc = new VORCalculator(new VOR());
+    VORResult result = calc.calculate(rs, 180);
+    System.out.println(result);
   }
 
 	public static void testIsAbeam(int radial, int obs) {

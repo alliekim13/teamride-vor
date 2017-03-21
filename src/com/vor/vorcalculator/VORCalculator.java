@@ -1,4 +1,7 @@
 package com.vor.vorcalculator;
+import com.vor.radio.RadioSignal;
+import com.vor.radio.Signal;
+
 import java.math.*;
 public class VORCalculator {
 	
@@ -51,12 +54,21 @@ public class VORCalculator {
     return deflection;
   }
 
-  public VORResult calculate(){
-    return null;
+  public VORResult calculate(RadioSignal signal, int obs){
+    int radial = signal.getRadial();
+    boolean signalIsGood = (signal.getSignal() == Signal.GOOD);
+    boolean isTo = isTo(radial, obs);
+    VORResult result = new VORResult();
+    result.setDeflection(calculateDeflection(radial, obs, isTo));
+    Direction direction = ((isTo)? Direction.TO: Direction.FROM);
+    result.setDirection(direction);
+    Signal outSignal = (!isAbeam(radial,obs) && signalIsGood)? Signal.GOOD: Signal.BAD;
+    result.setSignal(outSignal);
+    return result;
   }
 
   public boolean isTo(int radial, int obs) {
-    return true;
+    return false;
   }
 
 }

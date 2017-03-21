@@ -1,14 +1,14 @@
 package com.vor.vorcalculator;
 import com.vor.radio.RadioSignal;
 
-public class VORCalculator {
+public class VOR {
   private VORResult result;
   private int heading;
 
-  public VORCalculator() {
+  public VOR() {
   }
 
-  public VORCalculator(int heading) {
+  public VOR(int heading) {
     this.heading = heading;
   }
 

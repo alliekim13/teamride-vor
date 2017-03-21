@@ -1,6 +1,6 @@
 package com.vor.driver;
 import com.vor.radio.*;
-import com.vor.vorcalculator.VORCalculator;
+import com.vor.vorcalculator.VOR;
 
 public class Driver {
 	public static void main(String[] args) {
@@ -14,7 +14,7 @@ public class Driver {
 	}
 
 	public static void testVORCalculator() {
-    VORCalculator calc = new VORCalculator();
+    VOR calc = new VOR();
   }
 
 }

@@ -7,7 +7,7 @@ public class Direction {
 	private int radial;
 	private boolean direction; 
 	
-	public Direction() { //unsure on what the constructor will be like
+	public Direction() {
 		isTo();
 	}
 	
@@ -26,14 +26,13 @@ public enum Direction {
 	public boolean isTo(int heading, int radial) { 
 		this.heading = heading;
 		this.radial = radial;
-		Direction direct; // perhaps we should use the constants? direct == Direction.TO;
 		private boolean match = false;
 		private int difference = radial - heading;
 		
 		if (radial == heading) { // heading in opposite directions
 			if ((difference <= 0) && (difference >= -180) 
-					|| (difference >= 0) && (difference <= 180))) { 
-				match = true; // moving from the station
+					|| (difference >= 0) && (difference <= 180)) { 
+				match = true; // moving to the station
 			}
 			else {
 				match = false; // moving from the station

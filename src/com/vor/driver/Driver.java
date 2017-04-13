@@ -39,8 +39,8 @@ public class Driver {
     System.out.println(result);
   }
 
-  public static void testisTo(int heading, int radial) {
-    VORValculator vc = new VORCalculator(newVOR());
+  public static boolean testisTo(int heading, int radial) {
+    VORCalculator vc = new VORCalculator(new VOR());
     boolean result = vc.isTo(heading, radial);
     return result;
   }

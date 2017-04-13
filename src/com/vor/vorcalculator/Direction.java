@@ -2,49 +2,23 @@ package com.vor.vorcalculator;
 import com.vor.radio.Signal;
 import java.math.*;
 
-public class Direction {
-	private int heading;
-	private int radial;
-	private boolean direction; 
-	
-	public Direction() {
-		isTo();
-	}
+//public class Direction {
+//	private int heading;
+//	private int radial;
+//	private boolean direction;
+//
+//	public Direction() {
+//		isTo();
+//	}
 	
 public enum Direction {
-	TO, FROM;
-	
-	public static Direction getRandomDirection() {
-		return values()[(int) (Math.random() * values().length)];
-	}
+  TO, FROM;
 }
 	
-	/*
-	 * Parameters: int heading, int radial
-	 * Method for checking which direction the aircraft is going 
-	 * Returns: boolean, true if aircraft going 'to' and false if coming 'from' the station
-	 * Description: calculates the to/from of the aircraft
-	 * Reminder: radial always goes FROM station, so opposite of heading
-	 */
+//	public static Direction getRandomDirection() {
+//		return values()[(int) (Math.random() * values().length)];
+//	}
+
 	
-	public boolean isTo(int heading, int radial) { 
-		this.heading = heading;
-		this.radial = radial;
-		private boolean match = false;
-		private int difference = radial - heading;
-		
-		if (radial == heading) { // heading in opposite directions
-			if ((difference <= 0) && (difference >= -180) 
-					|| (difference >= 0) && (difference <= 180)) { 
-				match = true; // moving to the station
-			}
-			else {
-				match = false; // moving from the station
-			}
-	}
-		else {
-			return match;
-		}
-		return match;
-	}
-}
+
+//}

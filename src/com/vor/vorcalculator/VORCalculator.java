@@ -67,8 +67,31 @@ public class VORCalculator {
     return result;
   }
 
-  public boolean isTo(int radial, int obs) {
-    return false;
+  /*
+	 * Parameters: int heading, int radial
+	 * Method for checking which direction the aircraft is going
+	 * Returns: boolean, true if aircraft going 'to' and false if coming 'from' the station
+	 * Description: calculates the to/from of the aircraft
+	 * Reminder: radial always goes FROM station, so opposite of heading
+	 */
+
+  public boolean isTo(int heading, int radial) {
+    boolean match = false;
+    int difference = radial - heading;
+
+    if (radial == heading) { // heading in opposite directions
+      if ((difference <= 0) && (difference >= -180)
+          || (difference >= 0) && (difference <= 180)) {
+        match = true; // moving to the station
+      }
+      else {
+        match = false; // moving from the station
+      }
+    }
+    else {
+      return match;
+    }
+    return match;
   }
 
 }

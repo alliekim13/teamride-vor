@@ -60,7 +60,11 @@ public class Driver {
     System.out.println(result);
   }
 
+<<<<<<< HEAD
+  public static boolean testisTo(int heading, int radial) {
+=======
   public static void testisTo(int heading, int radial) {
+>>>>>>> b56ebb0145649659262a786ae9197158da3e17ce
     VORCalculator vc = new VORCalculator(new VOR());
     boolean result = vc.isTo(heading, radial);
     System.out.println(result);

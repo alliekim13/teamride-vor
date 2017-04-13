@@ -10,6 +10,8 @@ public class Driver {
 		testCalculateDeflection(178, 180, false);
 		testCalculateDeflection(182, 180, false);
 		testCalculateDeflection(7, 178, true);
+		
+		testisTo(180, 360);
 	}
 	
 	public static void testRadio() {
@@ -36,4 +38,11 @@ public class Driver {
       double result = vc.calculateDeflection(radial, obs, isTo);
     System.out.println(result);
   }
+
+  public static void testisTo(int heading, int radial) {
+    VORValculator vc = new VORCalculator(newVOR());
+    boolean result = vc.isTo(heading, radial);
+    return result;
+  }
+ 
 }

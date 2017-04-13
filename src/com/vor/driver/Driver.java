@@ -20,6 +20,9 @@ public class Driver {
 		testCalculateDeflection(189, 178, true);
 
 		testisTo(180, 360);
+		testisTo(180, 180);
+		testisTo(0, 360);
+		testisTo(360, 0); 
 	}
 	
 	public static void testRadio() {

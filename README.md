@@ -4,7 +4,7 @@ Contributors
 <ul>Kendrick Chen</ul>
 <ul>Robert Figg</ul>
 <ul>Allie Kim</ul>
-<hr>
+
 ## User Guide
 <li>Download the .zip file</li>
 <li>Open file in any IDE</li>
